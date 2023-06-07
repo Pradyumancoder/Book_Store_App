@@ -11,13 +11,33 @@ import {
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-
+import { logout } from "../Redux/Auth/Auth.action";
+import { Searchbar } from "./Searchbar";
+import FilterComponent from "./FilterComponent";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
- 
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const { authData } = useSelector((store) => store.auth);
+  const { isAuthenticated, token } = authData;
 
+  const Links = [
+    { element: "Home", to: "/" },
+    { element: "Cart", to: "/cart" },
+    { element: "Order", to: "/order" },
+  ];
+
+  const LinksTwo = [
+    { element: "Login", to: "/login" },
+    { element: "Sign Up", to: "/signup" },
+  ];
+
+  const handleLogout = async () => {
+    dispatch(logout());
+  };
 
   return (
     <Container
@@ -69,10 +89,12 @@ const Navbar = () => {
         </HStack>
         {location.pathname === "/" ? (
           <Box>
+            <FilterComponent />
           </Box>
         ) : null}
 
         <Box>
+          <Searchbar />
         </Box>
       </Flex>
 
