@@ -43,4 +43,5 @@ The Book Store App was built using the following technologies:
 
 To run the Book Store App locally, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository:https://github.com/Pradyumancoder/Book_Store_App
+2. Backend Api : https://fuzzy-erin-gaiters.cyclic.app/
