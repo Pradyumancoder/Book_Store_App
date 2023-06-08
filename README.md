@@ -34,11 +34,11 @@
                  
 ![Screenshot 2023-06-07 221424](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/bb8da79a-658e-4f17-b223-497f80301ed6)
                    
-  <h3>Home Page with Book Details<h3/>
+  <h3>Search Functionality<h3/>
                    
 ![Screenshot 2023-06-07 221502](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/7e953e40-ff0b-401c-8b40-98b152be5e14)
                      
-  <h3>Home Page with Book Details<h3/>
+  <h3>Books Details Page<h3/>
                      
 ![Screenshot 2023-06-07 221531](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/9f2d0842-469a-432c-8ba1-81758e7ec87d)
                        
