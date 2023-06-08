@@ -2,8 +2,6 @@
 ![Screenshot 2023-06-07 220513](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/17778220-bfe8-42f2-ae0f-913b7e5b7c44)
 ![Screenshot 2023-06-07 220603](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/62cef050-b75b-4582-8fe4-10f042329b62)
 ![Screenshot 2023-06-07 220635](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/dfcead98-1c49-4d68-8f9b-297763337236)
-![Screenshot 2023-06-07 220941](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/c5510172-d552-4d10-aaa8-8df7c1ea8492)
-![Screenshot 2023-06-07 220958](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/69cff52c-8078-42a0-ba67-ac8803dcd795)
 ![Screenshot 2023-06-07 221021](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/021fa2e6-8c4d-42b7-b55f-2882d5c69452)
 ![Screenshot 2023-06-07 221124](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/3ff98bc3-88d3-48fb-8caa-e843f8b3d91e)
 ![Screenshot 2023-06-07 221204](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/13274c80-9504-4108-96bf-91fc8e267b2b)
@@ -16,8 +14,7 @@
 ![nav+home](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/06ff4387-422b-4d05-b213-83441c11ddd5)
 ![order](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/43a9e39c-2c7f-47be-9b37-628eaf8de067)
 ![cart](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/f4cf7d04-42a4-4d10-86e4-b0de2b076eb9)
-![checkout](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/6badf3df-890e-4db1-816e-d5c5712bcb18)
-![checkoutpage](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/4d81879d-865b-4c63-8d7b-3ef3719e03dd)
+
 # Book Store App
 
 ## Deployment
