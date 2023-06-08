@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false); // Disabling strict mode for queries
 
 const ConnectDB = () => {
   mongoose

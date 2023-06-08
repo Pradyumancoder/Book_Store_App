@@ -3,6 +3,8 @@ const userModel = require("../models/userModels");
 const sendToken = require("../utils/jswToken");
 const bcrypt = require("bcrypt");
 
+
+// Register a new user
 const registerUser = catchAsyncErrors(async (req, res, next) => {
   const { name, email, password } = req.body;
 
@@ -22,7 +24,8 @@ const registerUser = catchAsyncErrors(async (req, res, next) => {
 
   sendToken(res, 201, user);
 });
-
+ 
+// user login
 const userLogin = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -53,6 +56,7 @@ const userLogin = catchAsyncErrors(async (req, res, next) => {
   sendToken(res, 200, userExists);
 });
 
+// Get all users
 const getAllUsers = catchAsyncErrors(async (req, res, next) => {
   try {
     res.status(200).json({
@@ -67,6 +71,7 @@ const getAllUsers = catchAsyncErrors(async (req, res, next) => {
   }
 });
 
+// Export the functions
 module.exports = {
   getAllUsers,
   registerUser,

@@ -3,6 +3,7 @@ const validator = require("validator");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+// Define the user schema
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -25,6 +26,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Generate a JWT token for the user
 
 userSchema.methods.getjwtToken = function () {
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, {
@@ -32,9 +34,13 @@ userSchema.methods.getjwtToken = function () {
   });
 };
 
+// Compare the provided password with the user's password
+
 userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
+
+// Create the User model based on the user schema
 
 const UserModel = mongoose.model("user", userSchema);
 

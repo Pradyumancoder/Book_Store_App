@@ -1,14 +1,16 @@
 const catchAsyncErrors = require("../middleware/catchAsyncError");
 const bookModel = require("../models/bookModels");
 
+// Function to get all books
 const getAllbooks = catchAsyncErrors(async (req, res, next) => {
   const { q, page, limit } = req.query;
 
   
-  let filterObj = {};
+  let filterObj = {}; // Initialize an empty filter object
 
   if (q) {
-    const regex = new RegExp(q, "i");
+    const regex = new RegExp(q, "i"); // Create a regular expression using the 'q' parameter (case-insensitive)
+
     filterObj = {
       $or: [
         { title: { $regex: regex } },
@@ -18,7 +20,8 @@ const getAllbooks = catchAsyncErrors(async (req, res, next) => {
     };
   }
 
- 
+   // Find books in the database using the filter object and apply pagination
+
   const books = await bookModel
     .find(filterObj)
     .skip((page - 1) * limit)
@@ -47,6 +50,8 @@ const getBookDetails = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
+
+// Export the functions
 module.exports = {
   getAllbooks,
   getBookDetails,
