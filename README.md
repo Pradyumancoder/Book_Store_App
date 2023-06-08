@@ -6,15 +6,15 @@
   
 ![Screenshot 2023-06-07 220513](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/17778220-bfe8-42f2-ae0f-913b7e5b7c44)
      
-     <h3>Home Page with Book Details<h3/>
+     <h3>Signup Page<h3/>
      
 ![Screenshot 2023-06-07 220603](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/62cef050-b75b-4582-8fe4-10f042329b62)
        
-       <h3>Home Page with Book Details<h3/>
+       <h3>Login Page<h3/>
        
 ![Screenshot 2023-06-07 220635](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/dfcead98-1c49-4d68-8f9b-297763337236)
          
-         <h3>Home Page with Book Details<h3/>
+         <h3>Cart Details Page<h3/>
          
 ![Screenshot 2023-06-07 221124](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/3ff98bc3-88d3-48fb-8caa-e843f8b3d91e)
            
