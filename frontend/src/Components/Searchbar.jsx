@@ -15,6 +15,7 @@ import {
   Card,
   Image,
   Heading,
+  Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,8 +31,7 @@ export const Searchbar = () => {
 
   useEffect(() => {
     dispatch(getSearchBooks(query));
-  }, [query]);
-
+  }, [query, dispatch]);
 
   const handleClose = () => {
     onClose();
@@ -39,7 +39,10 @@ export const Searchbar = () => {
 
   return (
     <>
-      <SearchIcon fontSize="xl" color="rgb(1, 75, 97)" onClick={onOpen} />
+      <Box display={"flex"} gap={"6px"}>
+        <Text>Search </Text>
+        <SearchIcon fontSize="xl" onClick={onOpen} />
+      </Box>
       <Drawer placement="top" onClose={handleClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent mt="30px" p="10px">
@@ -53,10 +56,9 @@ export const Searchbar = () => {
               <InputRightElement
                 children={
                   <IconButton
-                    aria-label="Search database"
-                    color={"rgb(1, 75, 97)"}
-                    bg="none"
-                    onClick={() => setQuery(query)}
+                    aria-label="Search books"
+                    bg="black"
+                    onClick={() => dispatch(getSearchBooks(query))}
                     icon={<SearchIcon />}
                   />
                 }
@@ -75,7 +77,7 @@ export const Searchbar = () => {
                 overflowY="scroll"
               >
                 {searchResult &&
-                  searchResult.map((ele,i) => {
+                  searchResult.map((ele, i) => {
                     return (
                       <NavLink
                         to={`/detail/${ele._id}`}

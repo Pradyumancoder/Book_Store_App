@@ -1,16 +1,16 @@
 const catchAsyncErrors = require("../middleware/catchAsyncError");
 const bookModel = require("../models/bookModels");
 
-// Function to get all books
+//get All books
 const getAllbooks = catchAsyncErrors(async (req, res, next) => {
   const { q, page, limit } = req.query;
 
-  
-  let filterObj = {}; // Initialize an empty filter object
+  // Create an empty filter object
+  let filterObj = {};
 
+  // If the 'q' query parameter is present, add search criteria to the filter object
   if (q) {
-    const regex = new RegExp(q, "i"); // Create a regular expression using the 'q' parameter (case-insensitive)
-
+    const regex = new RegExp(q, "i");
     filterObj = {
       $or: [
         { title: { $regex: regex } },
@@ -20,19 +20,19 @@ const getAllbooks = catchAsyncErrors(async (req, res, next) => {
     };
   }
 
-   // Find books in the database using the filter object and apply pagination
-
+  // Query the database using the search criteria
   const books = await bookModel
     .find(filterObj)
     .skip((page - 1) * limit)
     .limit(limit);
 
-
+  // Get the total count of  based on the search criteria
   const bookCount = await bookModel.countDocuments();
 
   res.status(201).json({ success: true, books, bookCount });
 });
 
+// Get Book Details
 const getBookDetails = catchAsyncErrors(async (req, res, next) => {
   const book = await bookModel.findById(req.params.id);
 
@@ -50,8 +50,6 @@ const getBookDetails = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-
-// Export the functions
 module.exports = {
   getAllbooks,
   getBookDetails,

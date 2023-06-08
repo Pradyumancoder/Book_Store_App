@@ -1,7 +1,3 @@
-// // get order items
-// export const GET_ORDER_ITEMS_LOADING = "order/items/get/laoding";
-// export const GET_ORDER_ITEMS_SUCCESS = "order/items/get/success";
-// export const GET_ORDER_ITEMS_ERROR = "order/items/get/error";
 
 import {
   ADD_ORDER_ITEM_TO_ERROR,

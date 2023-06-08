@@ -15,6 +15,7 @@ const BookList = ({ books }) => {
       gap={4}
       p={2}
       justifyContent="center"
+      className="mt-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 justify-center"
     >
       {books.map((book, i) => (
         <BookCard key={i} book={book} />

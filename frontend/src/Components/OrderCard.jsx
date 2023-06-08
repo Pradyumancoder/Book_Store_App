@@ -1,4 +1,4 @@
-import { CloseButton, Grid, Image, Text, useToast } from "@chakra-ui/react";
+import { Button, CloseButton, Grid, Image, Text, useToast } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeMoveOrderItem } from "../Redux/Order/order.Action";
@@ -28,6 +28,7 @@ const OrderCard = ({ item }) => {
       gap={2}
       mb={2}
      boxShadow={"lg"}
+     border={"2px solid white"}
     >
       <Image
         width={"100px"}
@@ -37,13 +38,16 @@ const OrderCard = ({ item }) => {
       />
       <Text>{item.title}</Text>
       <Text>{item.qty}</Text>
-      <CloseButton
-        bg={"red.500"}
-        border={"1px"}
-        size="md"
-        variant="outline"
-        onClick={() => handleCancleOrder(item._id)}
-      />
+      
+      <Button
+       bg="red.500"
+       width={"100px"}
+       borderWidth="1px"
+       border={"1px solid white"}
+       size="md"
+       variant="outline"
+       _hover={"black"}
+        onClick={() => handleCancleOrder(item._id)}>Delete</Button>
     </Grid>
   );
 };

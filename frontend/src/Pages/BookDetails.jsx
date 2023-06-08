@@ -14,24 +14,12 @@ import { getBookDetail } from "../Redux/Books/books.Action";
 import { addItemToCart } from "../Redux/Cart/cart.Action";
 import Loading from "../Components/Loading";
 
-
 const BookDetails = () => {
-
-  // Get the book ID from the URL params
-
   const { id } = useParams();
   const dispatch = useDispatch();
-
-// Get the book details and loading state from the Redux store
-
   const { loading, singleBook } = useSelector((store) => store.books);
 
-  
-  // Initialize Chakra-UI toast
   const toast = useToast();
-
- // Get cart data and loading state from the Redux store
-
   const { addCartItem, cartData } = useSelector((store) => store.cart);
   const { loading: cartLoading } = addCartItem;
 
@@ -44,7 +32,6 @@ const BookDetails = () => {
     qty: 1,
   };
 
-   // Handle adding the book to the cart
   const handleAddToCart = () => {
     const isItemInCart = cartData.find((item) => item._id === newItem._id);
 
@@ -57,9 +44,6 @@ const BookDetails = () => {
         isClosable: true,
       });
     } else {
-      
-// Dispatch the addItemToCart action and show a success toast
-
       dispatch(addItemToCart(newItem));
       toast({
         title: "Add Success.",
@@ -76,7 +60,7 @@ const BookDetails = () => {
   }
   if (loading) return <Loading />;
   return (
-    <Box mt={"80px"} p={4} justifyContent={"center"} alignItems={"center"}>
+    <Box mt={"80px"} border={"3px solid black"} background={"black"} color={"white"} p={4} justifyContent={"center"} alignItems={"center"}>
       <Stack spacing={4} direction={{ base: "column", md: "row" }}>
         <Image
           src={singleBook.image}

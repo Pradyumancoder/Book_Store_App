@@ -7,5 +7,4 @@ const sendToken = (res, stausCode, user) => {
     token,
   });
 };
-
 module.exports = sendToken;

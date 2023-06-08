@@ -165,32 +165,46 @@ const CheckOut = () => {
   }
 
   return (
-    <Box p={4} mt={"50px"}>
-      <Heading as="h1" mb={4}>
+    <Box p={4} mt={"50px"} background={"#9F3194"} color={"white"}  >
+      <Heading color={"black"} textAlign={"center"} >
         Checkout
       </Heading>
 
-      <Stack spacing={4}>
+      <Stack spacing={4} >
         <Heading as="h2" size="md" mb={2}>
           Delivery Address
         </Heading>
-        <Box>
+        <Box color={"black"}>
           <AddIcon /> {InitialFocus()}
         </Box>
         <Grid
           templateColumns="repeat(3, 1fr)"
-          alignItems="center"
-          gap={2}
+          alignItems=""
+          background="black"
+          color="white"
+           display={"flex"}
+          gap={"10px"}
+          justifyContent={"space-between"}
           mb={2}
         >
-          <Text fontSize={"bold"}>City:- {address.state}</Text>
-          <Text fontSize={"bold"}>Mobile:- {address.mobile}</Text>
-          <Text fontSize={"bold"}>Pinecode:- {address.Pincode}</Text>
+          <Text fontWeight="bold" >
+            City:- <Box color={"black"}> <input type="text" defaultValue={address.city} /></Box>
+          </Text>
+          <Text fontWeight="bold" >
+            State:- <Box color={"black"}> <input type="text" defaultValue={address.state} /></Box>
+          </Text>
+          <Text fontWeight="bold" >
+            Mobile No.:- <Box color={"black"}> <input type="text" defaultValue={address.mobile} /></Box>
+          </Text>
+          <Text fontWeight="bold" >
+            PinCode:- <Box color={"black"}> <input type="text" defaultValue={address.Pincode} /></Box>
+          </Text>
         </Grid>
-        <Heading as="h2" size="md" mb={2}>
+
+        <Heading as="h2" size="md" color={"white"} mb={2}>
           Cart Items ({totalItems})
         </Heading>
-        <Box height={"200px"} overflowY={"scroll"}>
+        <Box height={"200px"} overflowY={"scroll"} background={"black"} color={"white"} id="example">
           {cartData.map((item) => (
             <Grid
               key={item._id}
@@ -198,10 +212,11 @@ const CheckOut = () => {
               alignItems="center"
               gap={2}
               mb={2}
+              border={"1px solid white"}
             >
               <Image
                 objectFit="cover"
-                height="100px"
+                height="200px"
                 width={"auto"}
                 src={item.image}
                 alt={item.title}
@@ -215,7 +230,7 @@ const CheckOut = () => {
         </Box>
 
         <Box>
-          <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center">
+          <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center" background={"black"} color={"white"}>
             <Text>Total Items:</Text>
             <Text>{totalItems}</Text>
             <Text>Total Quantity:</Text>
@@ -225,7 +240,7 @@ const CheckOut = () => {
           </Grid>
         </Box>
 
-        <FormControl>
+        <FormControl background={"black"} color={"white"}>
           <FormLabel>Payment Method</FormLabel>
           <Stack direction="row" spacing={4}>
             <Checkbox

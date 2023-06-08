@@ -47,27 +47,37 @@ const BookCard = ({ book }) => {
   };
 
   return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+    
+    <Box
+      borderWidth="4px"
+      borderRadius="2g"
+      background={"black"}
+      textColor={"white"}
+      p={4}
+      className="border border-gray-300 rounded-lg overflow-hidden p-4"
+    >
       <Link to={`/detail/${book._id}`}>
         <Image
           margin={"auto"}
           height={"200px"}
+          border={"9px solid white"}
           src={book.image}
           alt={book.title}
+          className="mx-auto h-48"
         />
         <Stack mt={4}>
-          <Heading as="h3" size="md" height={"20px"}>
+          <Heading as="h3" size="md" height={"20px"} className="text-lg font-medium">
             {book.title}
           </Heading>
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize="sm" color="gray.500" className="text-gray-500">
             {book.author}
           </Text>
-          <Text m={"auto"} as={"p"} fontSize={"lg"}>
+          <Text m={"auto"} as={"p"} fontSize={"lg"} className="text-lg">
             {book.description.length < 8
               ? book.description
               : `${book.description.slice(0, 8)}...`}
           </Text>
-          <Text fontSize="lg" fontWeight="bold" mt={2}>
+          <Text fontSize="lg" fontWeight="bold" mt={2} className="text-lg font-bold">
             $ {book.price}
           </Text>
         </Stack>
@@ -87,10 +97,12 @@ const BookCard = ({ book }) => {
         variant="outline"
         mt={4}
         onClick={handleAddToCart}
+        className="w-full p-4 rounded-lg border border-teal-500 hover:bg-teal-300 hover:text-white"
       >
         Add To Cart
       </Button>
     </Box>
+   
   );
 };
 

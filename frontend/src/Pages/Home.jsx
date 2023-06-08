@@ -13,7 +13,6 @@ const Home = () => {
     dispatch(getBooks());
   }, []);
 
-  // filter the data 
   useEffect(() => {
     if (filterData.length > 0) {
       setBookData(filterData);

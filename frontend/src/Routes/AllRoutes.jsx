@@ -7,7 +7,7 @@ import Home from "../Pages/Home";
 import Cart from "../Pages/Cart";
 import BookDetails from "../Pages/BookDetails";
 import Order from "../Pages/Order";
-import CheckOut from "../Pages/CheckOut";
+import CheckOut from "../Pages/Checkout";
 
 // Component defining all the routes for the application
 const AllRoutes = () => {

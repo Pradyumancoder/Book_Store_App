@@ -29,6 +29,8 @@ const bookSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
+// Create the Mongoose model for the "book" collection using the bookSchema
 const bookModel = mongoose.model("book", bookSchema);
 
+// Export the bookModel to be used in other parts of the application
 module.exports = bookModel;

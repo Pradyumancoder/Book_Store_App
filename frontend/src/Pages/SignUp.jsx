@@ -76,6 +76,8 @@ const SignUp = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
+      background={"black"}
+      color={"white"}
     >
       <VStack
         width="full"
@@ -90,7 +92,7 @@ const SignUp = () => {
           fontSize="20px"
           mb="20px"
         >
-          SIGN UP FORM
+          SIGN-UP
         </Heading>
         <FormControl p={2}>
           <Input
@@ -148,7 +150,7 @@ const SignUp = () => {
             mt={4}
             onClick={handleSignUp}
           >
-            SIGN IN FORM
+            SIGN-IN BUTTON
           </Button>
         </FormControl>
       </VStack>

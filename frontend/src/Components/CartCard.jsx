@@ -43,33 +43,38 @@ const CartCard = ({ cart }) => {
 
   return (
     <Grid
-      templateColumns="repeat(4, 1fr)"
+      gridTemplateColumns="repeat(4, 1fr)"
       alignItems="center"
-      justifyContent={"space-between"}
+      justifyContent="space-between"
       p={4}
-      width={"full"}
+      background={"black"}
+      textColor={"white"}
+      width="full"
       gap={2}
       mb={2}
-      boxShadow={"lg"}
+      boxShadow="lg"
+      border={"1px solid white"}
     >
       <GridItem>
         <Image
-          width={"100px"}
-          height={"100px"}
+          width="100px"
+          height="100px"
           alt={cart.title}
           src={cart.image}
         />
       </GridItem>
       <GridItem>
-        <Text m={"auto"} as={"p"} fontSize={"lg"}>
+        <Text m="auto" as="p" fontSize="lg">
           Director:-{" "}
-          {cart.title.length < 8 ? cart.title : `${cart.title.slice(0, 8)}...`}
+          {cart.title.length < 8
+            ? cart.title
+            : `${cart.title.slice(0, 8)}...`}
         </Text>
       </GridItem>
       <GridItem>
         <ButtonGroup
           display="flex"
-          flexDir={{
+          flexDirection={{
             base: "column",
             sm: "row",
           }}
@@ -77,22 +82,22 @@ const CartCard = ({ cart }) => {
           gap="5px"
         >
           <Button
-            isDisabled={cart.qty <= 1}
+            disabled={cart.qty <= 1}
             colorScheme="teal"
             variant="solid"
             onClick={handleDecQty}
-            size={"sm"}
+            size="sm"
           >
             -
           </Button>
-          <Button variant="solid" size={"sm"}>
+          <Button color={"black"} variant="solid" size="sm">
             {cart.qty}
           </Button>
           <Button
-            isDisabled={cart.qty > 9}
+            disabled={cart.qty > 9}
             colorScheme="teal"
             variant="solid"
-            size={"sm"}
+            size="sm"
             onClick={handleIncQty}
           >
             +
@@ -100,13 +105,15 @@ const CartCard = ({ cart }) => {
         </ButtonGroup>
       </GridItem>
       <GridItem>
-        <CloseButton
-          bg={"red.500"}
-          border={"1px"}
+        <Button 
+         bg="red.500"
+          width={"100px"}
+          borderWidth="1px"
+          border={"1px solid white"}
           size="md"
           variant="outline"
-          onClick={() => handleRemove(cart._id)}
-        />
+          _hover={"black"}
+          onClick={() => handleRemove(cart._id)}>Delete</Button>
       </GridItem>
     </Grid>
   );

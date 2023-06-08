@@ -28,6 +28,8 @@ const Navbar = () => {
     { element: "Home", to: "/" },
     { element: "Cart", to: "/cart" },
     { element: "Order", to: "/order" },
+    { element: "Login", to: "/login" },
+    { element: "Sign Up", to: "/signup" },
   ];
 
   const LinksTwo = [
@@ -42,11 +44,11 @@ const Navbar = () => {
   return (
     <Container
       px={4}
-      shadow={"rgba(43, 64, 70, 0.14) 0px 12px 32px"}
+      border={"2px solid blue"}
+      background={"#5B3D9F"}
       maxW={"100%"}
       position="fixed"
-      backdropFilter={"blur(10px)"}
-      color="rgb(1, 75, 97)"
+      color="white"
       padding={"20px 30px"}
       top="0px"
       margin={"auto"}
@@ -83,7 +85,7 @@ const Navbar = () => {
               </NavLink>
             ))}
             {isAuthenticated || token ? (
-              <Button onClick={handleLogout}>Logut</Button>
+              <Button onClick={handleLogout} color={"black"}>LogOut</Button>
             ) : null}
           </HStack>
         </HStack>
@@ -113,7 +115,7 @@ const Navbar = () => {
                   </Text>
                 </NavLink>
               ))}
-              <Button onClick={handleLogout}>Logut</Button>
+              <Button onClick={handleLogout} color={"black"}>LogOut</Button>
             </Stack>
           ) : (
             <Stack as={"nav"} spacing={4}>

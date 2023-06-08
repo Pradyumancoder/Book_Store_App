@@ -12,7 +12,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import { login } from "../Redux/Auth/Auth.action";
 
-// Initial state for login details
 const initState = {
   email: "",
   password: "",
@@ -35,17 +34,18 @@ const Login = () => {
     setLoginDetails({ ...loginDetails, [name]: value });
   };
 
-  // Handles key press event (Enter key) for submitting the login form
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleLogin();
     }
   };
 
-  // Handles login attempt
+
   const handleLogin = async () => {
     if (email === "" || password === "") {
       return alert("fill both credentials");
+    
     }
     dispatch(login(loginDetails));
     if (isAuthenticated) {
@@ -85,6 +85,8 @@ const Login = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
+      background={"black"}
+      color={"white"}
     >
       <VStack
         width="full"
@@ -99,7 +101,7 @@ const Login = () => {
           fontSize="20px"
           mb="20px"
         >
-          LOGIN FORM
+          LOG-IN
         </Heading>
         <FormControl p={2}>
           <Input
@@ -144,7 +146,7 @@ const Login = () => {
             mt={4}
             onClick={handleLogin}
           >
-            LOGIN
+            LOG-IN
           </Button>
         </FormControl>
         <FormControl>
@@ -161,7 +163,7 @@ const Login = () => {
             mt={4}
             onClick={handleSignUp}
           >
-            SIGN UP
+            SIGN-UP
           </Button>
         </FormControl>
       </VStack>

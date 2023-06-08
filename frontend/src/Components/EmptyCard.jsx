@@ -6,16 +6,12 @@ const EmptyCard = ({ name }) => {
   return (
     <Center py={12} mt={"10px"}>
       <Box
-        style={{
-          boxShadow:
-            "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-        }}
-        role={"group"}
+        className="group"
         mt={"50px"}
         p={6}
         maxW={"330px"}
         w={"full"}
-        boxShadow={"2xl"}
+        shadow="2xl"
         rounded={"lg"}
         pos={"relative"}
         zIndex={1}
@@ -24,7 +20,7 @@ const EmptyCard = ({ name }) => {
           rounded={"lg"}
           mt={-12}
           pos={"relative"}
-          height={"230px"}
+          h={"230px"}
           _after={{
             transition: "all .3s ease",
             content: '""',
@@ -33,7 +29,8 @@ const EmptyCard = ({ name }) => {
             pos: "absolute",
             top: 5,
             left: 0,
-            backgroundImage: `https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png`,
+            bgImage:
+              "url('https://restaurant-e-commerce-website-m2yp.vercel.…p/static/media/empty-red.5309741357a4288595a9.gif')",
             filter: "blur(15px)",
             zIndex: -1,
           }}
@@ -45,22 +42,20 @@ const EmptyCard = ({ name }) => {
         >
           <Image
             rounded={"lg"}
-            height={230}
-            width={282}
+            h={"fit-content"}
+            w={"fit-content"}
             objectFit={"cover"}
-            src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png"
+            src="https://restaurant-e-commerce-website-m2yp.vercel.app/static/media/empty-red.5309741357a4288595a9.gif"
           />
         </Box>
-        <Stack pt={10} align={"center"}>
-          <Text color={"gray.500"} fontSize="15px">
-            Ohh No!
-          </Text>
+        <Stack pt={10} align={"center"} marginTop={"9px"}>
+          
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-            {`Your ${name} is Empaty`}
+            {`Your ${name} is Empty`}
           </Heading>
           <Stack direction={"row"} align={"center"}>
             <Link to="/">
-              <Button colorScheme="pink">Continue Shoping</Button>
+              <Button colorScheme="yellow">Continue Shopping</Button>
             </Link>
           </Stack>
         </Stack>

@@ -1,13 +1,7 @@
-/* 
-  The catchAsyncErrors function is a higher-order function that takes another function (theFunc) as input.
-  It returns a new function that handles async errors in a middleware-like manner.
-*/
-
 const catchAsyncErrors = (theFunc) => (req, res, next) => {
+  // Wrap theFunc in a Promise to handle asynchronous operations
   Promise.resolve(theFunc(req, res, next)).catch((err) => {
-
-  // If the error is due to a duplicate email (code 11000), return a 400 response with an appropriate error message.
-
+    // Handle duplicate key error
     if (err.code === 11000 && err.keyPattern && err.keyPattern.email === 1) {
       return res.status(400).json({
         success: false,
@@ -15,8 +9,7 @@ const catchAsyncErrors = (theFunc) => (req, res, next) => {
       });
     }
 
-        // For other errors, return a 400 response with a generic error message.
-
+    // If it's not a duplicate key error, handle it with the default error handler
     res.status(400).send({ msg: "Something went wrong", err: err.message });
   });
 };
