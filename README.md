@@ -1,16 +1,4 @@
- <h3>Home Page With Loading Page<h3/>
- 
-![Screenshot 2023-06-07 220416](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/2420925a-8896-44d8-9aca-38025d22c9a1)
-   
-  <h3>Home Page with Book Details<h3/>
-  
-![Screenshot 2023-06-07 220513](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/17778220-bfe8-42f2-ae0f-913b7e5b7c44)
-     
- <h3>Signup Page<h3/>
-     
-![Screenshot 2023-06-07 220603](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/62cef050-b75b-4582-8fe4-10f042329b62)
-       
-# Book Store App
+ # Book Store App
 
 ## Deployment
 
@@ -57,6 +45,20 @@ To run the Book Store App locally, follow these steps:
 
 1. Clone the repository:https://github.com/Pradyumancoder/Book_Store_App
 2. Backend Api : https://fuzzy-erin-gaiters.cyclic.app/
+
+<h3>Home Page With Loading Page<h3/>
+ 
+![Screenshot 2023-06-07 220416](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/2420925a-8896-44d8-9aca-38025d22c9a1)
+   
+  <h3>Home Page with Book Details<h3/>
+  
+![Screenshot 2023-06-07 220513](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/17778220-bfe8-42f2-ae0f-913b7e5b7c44)
+     
+ <h3>Signup Page<h3/>
+     
+![Screenshot 2023-06-07 220603](https://github.com/Pradyumancoder/Book_Store_App/assets/97114184/62cef050-b75b-4582-8fe4-10f042329b62)
+       
+
 
  <h3>Login Page<h3/>
        
